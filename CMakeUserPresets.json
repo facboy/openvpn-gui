@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "my-ovpn3",
+      "inherits": [ "x64-ovpn3" ],
+      "environment": {
+        "VCPKG_ROOT": "d:\\git\\vcpkg"
+      },
+      "cacheVariables": {
+        "VCPKG_INSTALL_OPTIONS": "--x-scripts-root=d:\\git\\vcpkg\\scripts"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "my-release-ovpn3",
+      "inherits": [ "x64-release-ovpn3" ],
+      "configurePreset": "my-ovpn3"
+    }
+  ]
+}
